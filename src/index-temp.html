@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>金亚洲元旦活动</title>
+    <script>
+    (function flexible (window, document) {
+        var docEl = document.documentElement
+        var dpr = window.devicePixelRatio || 1
+
+        // adjust body font size
+        function setBodyFontSize () {
+            if (document.body) {
+                document.body.style.fontSize = (12 * dpr) + 'px'
+            }
+            else {
+                document.addEventListener('DOMContentLoaded', setBodyFontSize)
+            }
+        }
+        // setBodyFontSize();
+
+        //  // set 1rem = viewWidth / 10
+        function setRemUnit () {
+            var rem = Math.min(docEl.clientWidth, 640) * 100 / 750
+            docEl.style.fontSize = rem + 'px'
+        }
+
+        setRemUnit()
+
+        // reset rem unit on page resize
+        window.addEventListener('resize', setRemUnit)
+        window.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                setRemUnit()
+            }
+        })
+
+        // detect 0.5px supports
+        if (dpr >= 2) {
+            var fakeBody = document.createElement('body')
+            var testElement = document.createElement('div')
+            testElement.style.border = '.5px solid transparent'
+            fakeBody.appendChild(testElement)
+            docEl.appendChild(fakeBody)
+            if (testElement.offsetHeight === 1) {
+                docEl.classList.add('hairlines')
+            }
+            docEl.removeChild(fakeBody)
+        }
+    }(window, document))
+    </script>
+</head>
+<body id="home">
+<div class="banner">
+    <div class="date">
+        2018年12月25日至2019年01月07日
+    </div>
+    <div class="btn-wrap">
+        <a href="javascript:">
+            <i></i>
+            <span>今日1/25</span>
+        </a>
+    </div>
+    <div class="water-wrap">
+        <div>
+            <span>当日可用流水：</span>
+            <span class="fs30">8888</span>
+        </div>
+        <div>
+            <span>元旦礼券剩余数量：</span>
+            <span class="fs30">88</span>
+        </div>
+    </div>
+</div>
+<div class="bl-line"></div>
+<div class="list-wrap">
+    <ul>
+        <li>
+            <div class="wrap">
+                <div class="img">
+                    <span>1/2</span>
+                </div>
+                <div class="btn-wrap">
+                    <p>3元礼金</p>
+                    <div class="btn">
+                        <a href="javascript:"></a>
+                        <span>今日1/30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <div class="wrap">
+                <div class="img">
+                    <span>304/305</span>
+                </div>
+                <div class="btn-wrap">
+                    <p>3元礼金</p>
+                    <div class="btn">
+                        <a href="javascript:"></a>
+                        <span>今日1/30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dot"></div>
+        </li>
+    </ul>
+</div>
+<div class="bottom">
+    <h3>活动细则</h3>
+    <ul>
+        <li>
+            <span class="serial">1</span>
+            <span class="text">
+                活动期间，投注有效流水达到2000即可在活动页面兑换一只小金猪。每日最多可兑换：25只。
+            </span>
+        </li>
+        <li>
+            <span class="serial">2</span>
+            <span class="text">
+                使用相对应的小金猪数量进行兑换礼金（兑换礼金也有次数限制）。
+            </span>
+        </li>
+        <li>
+            <span class="serial">3</span>
+            <span class="text">
+                流水仅限当日使用，次日凌晨00:00清空。
+            </span>
+        </li>
+        <li>
+            <span class="serial">4</span>
+            <span class="text">
+                小金猪可在活动期间累计，活动结束即无法使用。
+            </span>
+        </li>
+    </ul>
+    <h3>平台规则</h3>
+    <ul>
+        <li>
+            <span class="serial">1</span>
+            <span class="text">
+                有投注流水（含手机APP）皆可参加本次活动。（GA/AG/PT/沙巴体育/竞彩游戏除外）
+            </span>
+        </li>
+        <li>
+            <span class="serial">2</span>
+            <span class="text">
+                相同的账户/姓名/银行卡/IP地址只能参加一次。
+            </span>
+        </li>
+        <li>
+            <span class="serial">3</span>
+            <span class="text">
+                本次活动最终解释权归金亚洲，恶意套利的行为一经发现，平台将收回奖金及冻结账号。
+            </span>
+        </li>
+    </ul>
+</div>
+
+<div class="popup red" style="display: none">
+    <a href="javascript:" class="close"></a>
+    <div class="popup-content">
+
+    </div>
+</div>
+
+<div class="popup-pig red" style="display: none">
+    <a href="javascript:" class="close"></a>
+    <div class="popup-content one">
+        <div style="padding-top: 0.50rem">您的小金猪数量不足</div>
+        <div style="padding-top: 0.23rem">无法进行兑换</div>
+    </div>
+    <div class="popup-content two">
+        <div style="font-size: 0.24rem; padding-top: 0.1rem">恭喜您获得</div>
+        <div style="color: #f9cb00; font-size: 0.24rem"><span style="font-size: 0.6rem; font-weight: 700">5188</span>元</div>
+        <div style="font-size: 0.48rem; color: #f9cb00">礼金</div>
+    </div>
+    <div class="popup-bottom">
+        礼金将于次日凌晨4点前自动派发至您的账号
+    </div>
+</div>
+
+<div class="example-popup-btn">
+    <a href="javascript:" onclick="popup_1()">活动为开始</a>
+    <a href="javascript:" onclick="popup_2()">活动已结束</a>
+    <a href="javascript:" onclick="popup_3()">兑换次数已经达到要求的次数</a>
+    <a href="javascript:" onclick="popup_4()">兑换的礼券不够时点击兑换</a>
+    <a href="javascript:" onclick="popup_5()">玩家满足兑换条件</a>
+    <a href="javascript:" onclick="popup_6()">您的流水不足，无法兑换</a>
+</div>
+
+<div class="cover"></div>
+<div class="popup-cover"></div>
+</body>
+<script>
+
+function popup_1 () {
+    popup({
+        content: '<div>活动暂未开启<br>请于<span style="color: #f9cb00">2018年12月31日</span>后前来参加<br>谢谢</div>',
+        // type: 'red'
+        // popupWidth: 250
+    })
+}
+
+function popup_2 () {
+    popup({
+        content: '本次活动已结束',
+        // type: 'red'
+        // popupWidth: 550
+    })
+}
+
+function popup_3 () {
+    popup({
+        content: '兑换次数已上限<br>无法再次兑换',
+        type: 'red'
+        // popupWidth: 550
+    })
+}
+
+function popup_4 () {
+    popup_pig()
+}
+
+function popup_5 () {
+    popup_pig('red')
+}
+
+function popup_6 () {
+    popup({
+        content: '您的流水不足<br>无法兑换'
+    })
+
+}
+
+</script>
+</html>

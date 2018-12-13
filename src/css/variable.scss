@@ -1,0 +1,35 @@
+$purple : #551a88;
+$purple-border: #bb8ce3;
+$purple-text: #bc8be2;
+$red: #de5e51;
+$white: #fff;
+$black: #333;
+
+$gray-text: #999;
+$gray-text: #eaeaea;
+$grey-bg: #f5f5f5;
+
+$font-base-size           : 100;
+$fontFamily               : "Heiti SC","Microsoft Yahei","simsun",sans-serif;
+
+@function p2rem($pixel) {
+    @return #{$pixel / $font-base-size}rem;
+}
+
+@function rem2p($rem) {
+    @return #{$rem * $font-base-size}px;
+}
+
+@function p2em($pixel) {
+    @return #{$pixel / $font-base-size}em;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body,body * {
+    font-family: 'Helvetica';
+}

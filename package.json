@@ -1,0 +1,55 @@
+{
+    "name": "jyz-yuandan-mobile",
+    "version": "1.0.0",
+    "description": "金亚洲-元旦活动-手机端",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack-dev-server --mode=development",
+        "build": "webpack --mode=production",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://git.mango/Ignis/jyz-ga.git"
+    },
+    "keywords": [
+        "ga",
+        "ignis"
+    ],
+    "author": "ignis",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.3",
+        "babel-preset-env": "^1.6.1",
+        "clean-webpack-plugin": "^0.1.19",
+        "copy-webpack-plugin": "^4.5.2",
+        "css-loader": "^0.28.10",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^1.1.11",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "i18n-webpack-plugin": "^1.0.0",
+        "image-webpack-loader": "^4.6.0",
+        "node-sass": "^4.8.3",
+        "sass-loader": "^6.0.7",
+        "style-loader": "^0.20.3",
+        "uglifyjs-webpack-plugin": "^1.2.5",
+        "url-loader": "^1.0.1",
+        "webpack": "^4.16.0",
+        "webpack-cli": "^3.0.8",
+        "webpack-dev-server": "^3.1.4"
+    },
+    "dependencies": {
+        "animate.css": "^3.6.1",
+        "bootstrap": "^4.1.1",
+        "clipboard": "^2.0.1",
+        "fullpage.js": "^3.0.4",
+        "i18next": "^11.3.6",
+        "i18next-browser-languagedetector": "^2.2.0",
+        "i18next-xhr-backend": "^1.5.1",
+        "jquery-i18next": "^1.2.1",
+        "popper.js": "^1.14.3",
+        "swiper": "^4.3.3"
+    }
+}
